@@ -85,7 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image:
+  background-image: 
     linear-gradient(rgba(18, 16, 14, 0.7), rgba(18, 16, 14, 0.7)),
     url("../img/header-bg.jpeg");
   background-repeat: no-repeat;
