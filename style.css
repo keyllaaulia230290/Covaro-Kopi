@@ -80,14 +80,14 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background-image: 
     linear-gradient(rgba(18, 16, 14, 0.7), rgba(18, 16, 14, 0.7)),
-    "img/header-bg.jpeg"
+    url("header-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
