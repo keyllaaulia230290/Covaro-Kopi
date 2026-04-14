@@ -252,6 +252,7 @@ body {
 
 /* Menu Section */
 .menu h2,
+.products h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
@@ -280,10 +281,9 @@ body {
   border: 1px solid rgba(203, 168, 124, 0.2);
   padding: 2rem;
   border-radius: 10px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   width: 25rem;
 }
 
@@ -308,16 +308,38 @@ body {
 
 /* Products Section */
 .products .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem;
-  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.products .product-card {
+.products .row .product-card {
   text-align: center;
+  background-color: transparent;
+  border: 1px solid rgba(203, 168, 124, 0.2);
   padding: 2rem;
-  border: 1px solid #666
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  width: 25rem;
+}
+
+.products .row .product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: var(--surface);
+  border-color: var(--primary);
+}
+
+.products .row .product-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .products .product-icons {
@@ -336,6 +358,44 @@ border-radius: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+.products .product-icons a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  
+}
+
+.products .product-image {
+  padding: 1rem 0;
+}
+
+.products .product-image img {
+  height: 25rem;
+}
+
+.products .product-content h3 {
+  font-size: 2rem;
+}
+
+.products .product-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.products .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.products .product-price span {
+ text-decoration: line-through;
+ font-weight: lighter;
+ font-size: 1rem;
 }
 
 .menu .app-link {
