@@ -180,8 +180,10 @@ body {
 }
 
 .shopping-cart img {
-  height: 4rem;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .shopping-cart h3 {
@@ -213,51 +215,75 @@ body {
 /* Checkout Form */
 .form-container {
   display: flex;
-  padding: 2px 5px;
-  cursor: pointer;
-  margin: 5px 8px;
+  flex-direction: column; /* ⬅️ ini penting biar gak numpuk ke samping */
+  padding: 15px;
+  margin: 10px;
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #9b6b43, #c79a6b);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
   color: white;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
+/* Title */
 .form-container h5 {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
+/* Form */
 .form-container form {
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+/* Label jadi vertical */
 .form-container label {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 1rem 0;
+  flex-direction: column; /* ⬅️ biar rapi ke bawah */
+  align-items: flex-start;
+  gap: 5px;
 }
 
+/* Text label */
 .form-container span {
-  text-align: right;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
+/* Input */
 .form-container input {
-  background-color: #ddd;
-  padding: 5px;
-  font-size: 1rem;
-  width: 70%;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
 
+/* Button */
 .form-container .checkout-button {
-  padding: 6px 14px;
-  background-color: royalblue;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+
+  background: #1e88e5; /* ⬅️ beda warna biar kontras */
   color: white;
   font-weight: bold;
-  font-size: 1rem;
-  border-radius: 20px;
-  margin: 1rem auto;
+
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-container .checkout-button:hover {
+  background: #1565c0;
 }
 
 /* Hero Section */
