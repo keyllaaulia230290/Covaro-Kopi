@@ -494,6 +494,24 @@ body {
   font-weight: 600;
 }
 
+.flash-card {
+  min-width: 140px;   /* 🔥 biar konsisten */
+  flex-shrink: 0;     /* 🔥 biar ga gepeng */
+  scroll-snap-align: start;
+
+  border-radius: 12px;
+}
+
+.flash-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+}
+
 /* TIMER CONTAINER */
 .timer {
   display: flex;
@@ -1037,5 +1055,24 @@ footer .credit a {
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .flash-container {
+    padding-left: 10px;
+  }
+
+  .flash-card {
+    min-width: 120px;   /* lebih kecil biar muat */
+  }
+
+  .flash-card img {
+    height: 100px;      /* biar proporsional */
+  }
+
+  .flash-title {
+    font-size: 1.6rem;
   }
 }
