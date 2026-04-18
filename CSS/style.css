@@ -495,8 +495,8 @@ body {
 }
 
 .flash-card {
-  min-width: 140px;   /* 🔥 biar konsisten */
-  flex-shrink: 0;     /* 🔥 biar ga gepeng */
+  min-width: 140px;   
+  flex-shrink: 0;     
   scroll-snap-align: start;
 
   border-radius: 12px;
