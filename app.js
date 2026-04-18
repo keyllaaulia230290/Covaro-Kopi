@@ -73,3 +73,28 @@ const rupiah = (number) => {
     minimumFractionDigits: 0,
   }).format(number);
 };
+
+function flashSale() {
+  return {
+    hours: '00',
+    minutes: '00',
+    seconds: '00',
+    time: 3600, // 1 jam (detik)
+
+    startTimer() {
+      setInterval(() => {
+        if (this.time > 0) {
+          this.time--;
+
+          let h = Math.floor(this.time / 3600);
+          let m = Math.floor((this.time % 3600) / 60);
+          let s = this.time % 60;
+
+          this.hours = String(h).padStart(2, '0');
+          this.minutes = String(m).padStart(2, '0');
+          this.seconds = String(s).padStart(2, '0');
+        }
+      }, 1000);
+    }
+  }
+}

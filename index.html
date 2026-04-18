@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
     <!-- Feather Icons-->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -109,6 +109,68 @@
       </main> 
       </section>
     <!-- Hero Section end -->
+
+    <!-- Flash sale kopi start -->
+  <section class="flash-sale" x-data="flashSale()" x-init="startTimer()">
+  
+  <div class="flash-header">
+  <h2 class="flash-title">
+    🔥 FLASH SALE 🔥
+  </h2>
+
+  <div class="timer">
+    <span x-text="hours"></span>
+    <span x-text="minutes"></span>
+    <span x-text="seconds"></span>
+  </div>
+</div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+
+      <!-- CARD -->
+      <div class="card">
+        <img src="img/3.jpg">
+        <h3>Espresso</h3>
+        <span class="price">Rp15.000</span>
+      </div>
+
+      <div class="card">
+        <img src="img/2.jpg">
+        <h3>Latte</h3>
+        <span class="price">Rp23.000</span>
+      </div>
+
+      <div class="card">
+        <img src="img/3.jpg">
+        <h3>Cappuccino</h3>
+        <span class="price">Rp25.000</span>
+      </div>
+
+      <!-- DUPLIKAT WAJIB -->
+      <div class="card">
+        <img src="img/3.jpg">
+        <h3>Espresso</h3>
+        <span class="price">Rp15.000</span>
+      </div>
+
+      <div class="card">
+        <img src="img/2.jpg">
+        <h3>Latte</h3>
+        <span class="price">Rp23.000</span>
+      </div>
+
+      <div class="card">
+        <img src="img/3.jpg">
+        <h3>Cappuccino</h3>
+        <span class="price">Rp25.000</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+    <!-- Flash sale kopi end -->
 
     <!-- About Section Start -->
     <section id="about" class="about">
@@ -299,5 +361,38 @@
 
     <!-- My JavaScript -->
     <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Alpine slider -->
+<script>
+function slider() {
+  return {
+    swiper: null,
+
+    init() {
+     this.swiper = new Swiper(this.$refs.swiper, {
+       slidesPerView: 'auto',
+       spaceBetween: 15,
+      loop: true,
+
+       speed: 8000,
+       freeMode: true,
+       freeModeMomentum: false,
+
+       loopAdditionalSlides: 5,
+
+       autoplay: {
+       delay: 1,
+       disableOnInteraction: false,
+       },
+     });
+    }
+  }
+}
+</script>
+
   </body>
 </html>
